@@ -104,19 +104,44 @@ h1, h2, h3, h4, strong { color: var(--dark-color); font-weight: 600; }
 .call-btn { width: 36px; height: 36px; border-radius: 50%; background-color: var(--primary-color); color: var(--white-color); display: inline-flex; align-items: center; justify-content: center; text-decoration: none; font-size: 18px; }
 
 /* --- Pricing Section --- */
+#pricing { background-color: var(--light-gray-color); }
 .pricing-toggle { display: flex; justify-content: center; margin-bottom: 48px; }
 .toggle-switch { background-color: var(--white-color); padding: 6px; border-radius: 12px; display: flex; gap: 8px; border: 1px solid var(--border-color); }
-.toggle-btn { padding: 8px 24px; border-radius: 8px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; }
+.toggle-btn { padding: 8px 24px; border-radius: 8px; font-weight: 500; cursor: pointer; transition: all 0.3s ease; background-color: transparent; border: none; color: var(--text-color); }
 .toggle-btn.active { background-color: var(--primary-color); color: var(--white-color); box-shadow: 0 4px 10px rgba(1, 219, 200, 0.3); }
+
 .pricing-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
-.pricing-card { background-color: var(--white-color); padding: 40px; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; }
-.pricing-card h3 { font-size: 22px; margin-bottom: 16px; }
-.price { font-size: 48px; font-weight: 700; color: var(--dark-color); margin-bottom: 8px; }
-.price .strikethrough { font-size: 24px; color: var(--text-color); text-decoration: line-through; margin-left: 8px; }
-.pricing-card .btn { margin: 24px 0; width: 100%; }
-.features-list { list-style: none; text-align: left; }
-.features-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 12px; }
+.pricing-card { background-color: var(--white-color); padding: 40px; border-radius: 20px; border: 1px solid var(--border-color); text-align: left; }
+
+.pricing-card h3 { font-size: 24px; margin-bottom: 16px; text-align: center; }
+
+.price-display { display: flex; justify-content: center; align-items: baseline; gap: 4px; margin-bottom: 8px; }
+.price-currency { font-size: 32px; font-weight: 600; color: var(--dark-color); }
+.price { font-size: 56px; font-weight: 700; color: var(--dark-color); }
+.billing-cycle { font-size: 16px; color: var(--text-color); font-weight: 400; }
+
+.save-badge {
+    display: none; /* Hidden by default */
+    margin: 0 auto 16px auto;
+    width: fit-content;
+    padding: 4px 12px;
+    background-color: #e6fcf9;
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 999px;
+}
+.save-badge.visible {
+    display: block;
+}
+
+.pricing-card .btn { margin: 24px auto; display: block; width: 100%; text-align: center; }
+
+.features-list { list-style: none; text-align: left; margin-top: 32px; }
+.features-list li { margin-bottom: 16px; display: flex; align-items: flex-start; gap: 12px; }
 .features-list i { color: var(--primary-color); font-size: 20px; margin-top: 2px; flex-shrink: 0; }
+.features-list div { display: flex; flex-direction: column; }
+.features-list small { color: var(--text-color); line-height: 1.5; }
 
 /* --- Phone Mockup Styles --- */
 .phone-mockup { background-color: var(--dark-color); border-radius: 40px; padding: 12px; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.2); margin-top: auto; }
