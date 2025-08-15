@@ -152,41 +152,76 @@
         </section>
 
         <!-- Pricing Section -->
-        <section class="section" id="pricing">
-            <div class="container fade-in">
-                <h2 class="section-title">Flexible LMS <span class="highlight">pricing plans</span></h2>
-                <p class="section-subtitle">Select the ideal plan that aligns with your organization's size and needs.</p>
-                <div class="pricing-toggle">
-                    <div class="toggle-switch">
-                        <div class="toggle-btn">Monthly -15%</div>
-                        <div class="toggle-btn active">Yearly</div>
-                    </div>
-                </div>
-
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>Starter</h3>
-                        <div class="price">$14.00 <span class="strikethrough">$24.00</span></div>
-                        <a href="#" class="btn btn-outline">Get Started</a>
-                        <ul class="features-list">
-                            <li><i class='bx bx-check-circle'></i>Basic LMS features to manage courses and attendance.</li>
-                            <li><i class='bx bx-check-circle'></i>Suitable for teams with a limited training requirement.</li>
-                            <li><i class='bx bx-check-circle'></i>Access to essential analytics.</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>Pro</h3>
-                        <div class="price">$55.00 <span class="strikethrough">$75.00</span></div>
-                        <a href="#" class="btn btn-outline">Get Started</a>
-                         <ul class="features-list">
-                            <li><i class='bx bx-check-circle'></i>Advanced tools for learning progress tracking and engagement.</li>
-                            <li><i class='bx bx-check-circle'></i>Customizable learning reports.</li>
-                            <li><i class='bx bx-check-circle'></i>Tools for onboarding and upskilling.</li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- Pricing Section -->
+<section class="section" id="pricing">
+    <div class="container fade-in">
+        <h2 class="section-title">Flexible LMS <span class="highlight">pricing plans</span></h2>
+        <p class="section-subtitle">Select the ideal plan that aligns with your organization's size and needs.</p>
+        
+        <div class="pricing-toggle">
+            <div class="toggle-switch">
+                <button class="toggle-btn" id="monthly-btn">Monthly</button>
+                <button class="toggle-btn active" id="yearly-btn">Yearly</button>
             </div>
-        </section>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- Starter Plan -->
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <div class="price-display">
+                    <span class="price-currency">₼</span>
+                    <span class="price" data-monthly="1.50" data-yearly="15.00">15.00</span>
+                    <span class="billing-cycle">/ yearly</span>
+                </div>
+                <div class="save-badge visible">Save 20%</div>
+                <a href="#" class="btn btn-outline">Get Started</a>
+                <ul class="features-list">
+                    <li>
+                        <i class='bx bx-check-circle'></i>
+                        <div>
+                            <strong>Employee Communication Module:</strong>
+                            <small>Company News, Announcements, Push Notifications, Surveys, Forms, Polls, Advanced Audience Targeting.</small>
+                        </div>
+                    </li>
+                    <li>
+                        <i class='bx bx-check-circle'></i>
+                        <div>
+                            <strong>LMS Module:</strong>
+                            <small>Courses, Clusters, Trainings, Quizzes, Certificates, Badges, Leaderboard.</small>
+                        </div>
+                    </li>
+                    <li>
+                        <i class='bx bx-check-circle'></i>
+                        <div>
+                            <strong>Reporting & Analytics</strong>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Pro Plan -->
+            <div class="pricing-card">
+                <h3>Pro</h3>
+                 <div class="price-display">
+                    <span class="price-currency">₼</span>
+                    <span class="price" data-monthly="2.00" data-yearly="20.00">20.00</span>
+                    <span class="billing-cycle">/ yearly</span>
+                </div>
+                <div class="save-badge visible">Save 20%</div>
+                <a href="#" class="btn btn-outline">Get Started</a>
+                 <ul class="features-list">
+                     <li><i class='bx bx-check-circle'></i><div><strong>Employee Communication Module:</strong><small>Includes all Starter features, plus Events.</small></div></li>
+                     <li><i class='bx bx-check-circle'></i><div><strong>LMS Module:</strong><small>Courses, Clusters, Trainings, Quizzes, Certificates, Badges, Leaderboard.</small></div></li>
+                     <li><i class='bx bx-check-circle'></i><div><strong>Reporting & Analytics</strong></div></li>
+                     <li><i class='bx bx-check-circle'></i><div><strong>Content Hub:</strong><small>Blog, Articles, Podcasts, and Video Hub.</small></div></li>
+                     <li><i class='bx bx-check-circle'></i><div><strong>Internal Vacancies Module</strong></div></li>
+                     <li><i class='bx bx-check-circle'></i><div><strong>3rd Party API Integration</strong></div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- CTA Banners -->
         <section class="section">
