@@ -84,3 +84,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // --- Pricing Toggle Logic ---
+    const monthlyBtn = document.getElementById('monthly-btn');
+    const yearlyBtn = document.getElementById('yearly-btn');
+    const pricingCards = document.querySelectorAll('.pricing-card');
+
+    function updatePricing(period) {
+        // Update button styles
+        if (period === 'yearly') {
+            yearlyBtn.classList.add('active');
+            monthlyBtn.classList.remove('active');
+        } else {
+            monthlyBtn.classList.add('active');
+            yearlyBtn.classList.remove('active');
+        }
+
+        // Update card content
+        pricingCards.forEach(card => {
+            const priceEl = card.querySelector('.price');
+            const cycleEl = card.querySelector('.billing-cycle');
+            const badgeEl = card.querySelector('.save-badge');
+
+            const monthlyPrice = priceEl.dataset.monthly;
+            const yearlyPrice = priceEl.dataset.yearly;
+
+            if (period === 'yearly') {
+                priceEl.textContent = yearlyPrice;
+                cycleEl.textContent = '/ yearly';
+                if (badgeEl) badgeEl.classList.add('visible');
+            } else {
+                priceEl.textContent = monthlyPrice;
+                cycleEl.textContent = '/ monthly';
+                if (badgeEl) badgeEl.classList.remove('visible');
+            }
+        });
+    }
+
+    monthlyBtn.addEventListener('click', () => updatePricing('monthly'));
+    yearlyBtn.addEventListener('click', () => updatePricing('yearly'));
+    
+    // Set initial state on page load
+    updatePricing('yearly');
+
+});
